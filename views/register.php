@@ -30,7 +30,7 @@ echo '</style>'; ?>
 
 <div class="formbox">
     <h3 style="color:bisque;font-size:2.5em;">Register new account</h3><br>
-    <form class="needs-validation" id="register" action="../index.php" method="POST" novalidate>
+    <form class="needs-validation" id="register" action="../validation.php" method="POST" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="username"><h5>Username</h5></label>
@@ -91,6 +91,9 @@ echo '</style>'; ?>
     </div>
   </form>
 </div>
+
+
+
 
 <script>
 // JavaScript for disabling form submissions if there are invalid fields.
