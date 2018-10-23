@@ -1,33 +1,33 @@
 <?php
 
 session_start();
-include 'includes/database_connection.php';
+include '../includes/database_connection.php';
 // Same value in both $_POST["username"] and $username
 
-if(isset($_POST['username'])) { 
+if(!isset($_POST['username'])) { 
     // check if the username has not been set
-    $username = $_POST["username"];
+    header('Location: index.php?register_failed=true');
 }else {
     $username = $_POST["username"];
 };
 
 if(!isset($_POST['password'])) { 
     // check if the username has not been set
-    $password = $_POST["password"];
+    header('Location: index.php?register_failed=true');
 }else {
     $password = $_POST["password"];
 };
 
 if(!isset($_POST['phone_number'])) { 
     // check if the username has not been set
-    $phone_number = $_POST["phone_number"];
+    header('Location: index.php?register_failed=true');
 }else {
     $phone_number = $_POST["phone_number"];
 };
 
 if(!isset($_POST['email'])) { 
     // check if the username has not been set
-    $email = $_POST["email"];
+    header('Location: index.php?register_failed=true');
 }else {
     $email = $_POST["email"];
 };
@@ -49,5 +49,5 @@ $statement->execute(
   ]
 );
 
-header('Location: views/login.php');
+header('Location: ../views/login.php');
 ?>
