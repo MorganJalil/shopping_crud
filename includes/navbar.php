@@ -3,9 +3,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <h1 class="navbar-brand m-auto">Le Boutique</h1>
-  <button class="btn btn-sm align-middle btn-dark ml-auto mr-2 order-sm-last" type="button">
-    <span class="fa fa-shopping-cart" aria-hidden="true">
-  </span></button>
+    <button class="btn btn-sm align-middle btn-dark ml-auto mr-2 order-sm-last" type="button">
+        <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+    </button>
 
   <div class="collapse navbar-collapse" order-first-md id="navbarToggler">
     <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
@@ -21,8 +21,9 @@
                 </li>
         <?php else : ?>
         <li class="nav-item">
-        <?= $_SESSION["username"]; ?>
-            <a class="nav-link" href="#">Logout</a>
+        <a class="nav-link" href="#">User Account: <?= $_SESSION["username"];?></a>
+        <li class="nav-item">
+            <a class="nav-link" href="validations/logout_validation.php">Logout</a>
         </li>
         <?php endif; ?>
     </ul>

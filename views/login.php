@@ -30,7 +30,7 @@ echo '</style>'; ?>
 
 <div class="formbox">
     <h3 style="color:bisque;font-size:2.5em;">Login</h3><br>
-  <form class="needs-validation" id="login" action="../index.php" method="POST" novalidate>
+  <form class="needs-validation" id="login" action="../validations/login_validation.php" method="POST" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="username"><h5>Username:</h5></label>
