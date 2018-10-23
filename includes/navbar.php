@@ -10,10 +10,11 @@
   <div class="collapse navbar-collapse" order-first-md id="navbarToggler">
     <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
 
-        <?php
+        <?php 
+        /* Check if username is set or not, to show context sensitive links depending on result.*/
             if(!isset($_SESSION['user'])): ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="views/login.php">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Register</a>
