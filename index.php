@@ -6,19 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
     <link rel="stylesheet" media="all" type="text/css" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm navbar-light navbar-fixed-top navbar-custom">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Store</a>
+  <h1 class="navbar-brand m-auto">Le Boutique</h1>
+  <button class="btn btn-sm align-middle btn-dark ml-auto mr-2 order-sm-last" type="button">
+  <span class="fa fa-shopping-cart" aria-hidden="true">
+  </span></button>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+  <div class="collapse navbar-collapse" order-first-md id="navbarToggler">
+    <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link" href="#">Login</a>
       </li>
@@ -30,10 +34,8 @@
       </li>
     </ul>
   </div>
-    <form class="form my-2 my-lg-0">
-    <span class="fa fa-shopping-cart" aria-hidden="true"></span>
-      
-    </form>
+  
+  
 </nav>
 
 
