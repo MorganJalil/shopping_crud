@@ -11,13 +11,13 @@
     <ul class="navbar-nav ml-auto mt-0 mt-lg-0">
 
         <?php 
-        /* Check if username is set or not, to show context sensitive links depending on result.*/
+        /* Check if username is set or not, to show context sensitive links depending on result through session.*/
             if(!isset($_SESSION['username'])): ?>
                 <li class="nav-item">
                     <a class="nav-link" href="views/login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="views/register.php">Register</a>
                 </li>
         <?php else : ?>
         <li class="nav-item">

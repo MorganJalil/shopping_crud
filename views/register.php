@@ -29,27 +29,59 @@ echo '</style>'; ?>
 </nav>
 
 <div class="formbox">
-    <h3 style="color:bisque;font-size:2.5em;">Login</h3><br>
-  <form class="needs-validation" id="login" action="../index.php" method="POST" novalidate>
+    <h3 style="color:bisque;font-size:2.5em;">Register new account</h3><br>
+    <form class="needs-validation" id="register" action="../index.php" method="POST" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
-        <label for="username"><h5>Username:</h5></label>
+        <label for="username"><h5>Username</h5></label>
         <input type="text" class="form-control" name="username" id="username"  required>
         <div class="valid-feedback">
         ✔
         </div>        
         <div class="invalid-feedback">
-          Please type in your username.
+          Please register in your username.
         </div>
       </div>
       <div class="col-md-6 mb-3">
-        <label for="password"><h5>Password:</h5></label>
+        <label for="password"><h5>Password</h5></label>
         <input type="text" class="form-control" name="password"  id="password"  required>
         <div class="valid-feedback">
         ✔
         </div>
         <div class="invalid-feedback">
-          Please type in your password.
+          Please register your password.
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="phonenumber"><h5>Phonenumber</h5></label>
+        <input type="tel" class="form-control" name="phone_number"  id="phonenumber"  required>
+        <div class="valid-feedback">
+        ✔
+        </div>
+        <div class="invalid-feedback">
+          Please register in your phonenumber.
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="email"><h5>Email</h5></label>
+        <input type="email" class="form-control" name="email"  id="email"  required>
+        <div class="valid-feedback">
+        ✔
+        </div>
+        <div class="invalid-feedback">
+          Please register a valid e-mail.
+        </div>
+      </div>
+    
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
         </div>
       </div>
     </div>
