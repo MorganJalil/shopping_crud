@@ -1,6 +1,16 @@
 <?php
 session_start();
 include '../includes/database_connection.php';
+
+/**
+ * 1. Koppla upp till databasen
+ * 2. Hämta användaren från databasen
+ * 3. Kolla så att lösenordet i databasen
+ *    stämmer överens med lösenordet
+ *    som användaren har skrivit in i 
+ *    formuläret: password_verify
+ */
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +29,7 @@ echo '</style>'; ?>
 </nav>
 
 <div class="formbox">
-    <h3 style="color:white;font-size:3em;">Login </h3>
+    <h3 style="color:bisque;font-size:2.5em;">Login</h3>
   <form class="needs-validation" id="login" action="../index.php" method="POST" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">

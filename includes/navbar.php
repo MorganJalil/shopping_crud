@@ -12,7 +12,7 @@
 
         <?php 
         /* Check if username is set or not, to show context sensitive links depending on result.*/
-            if(!isset($_SESSION['user'])): ?>
+            if(!isset($_SESSION['username'])): ?>
                 <li class="nav-item">
                     <a class="nav-link" href="views/login.php">Login</a>
                 </li>
@@ -21,6 +21,7 @@
                 </li>
         <?php else : ?>
         <li class="nav-item">
+        <?= $_SESSION["username"]; ?>
             <a class="nav-link" href="#">Logout</a>
         </li>
         <?php endif; ?>
