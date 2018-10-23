@@ -10,8 +10,7 @@ echo '<style>';
 echo '</style>'; ?>
 <body>
 
-<nav class="navbar navbar-expand-sm navbar-light navbar-fixed-top navbar-custom shadow rounded">
-
+<nav class="navbar navbar-expand-sm navbar-light navbar-fixed-top navbar-custom shadow py-0">
   <h1 class="navbar-brand mr-auto">Le Boutique</h1>
   <button class="btn btn-sm align-middle btn-dark ml-auto mr-2 order-sm-last" type="button">
     <span class="fa fa-shopping-cart" aria-hidden="true">
