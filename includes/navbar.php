@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light navbar-fixed-top navbar-custom shadow py-1">
+<nav class="navbar navbar-expand-sm navbar-light sticky-top navbar-custom shadow py-1">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

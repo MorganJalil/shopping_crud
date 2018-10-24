@@ -25,20 +25,21 @@ if($statement){
   // Save user globally to session
   ?>
 
-  <div class="container-fluid">
+  <div class="container-fluid my-5">
     <div class="row">
         <?php
             $i=0;
             foreach($statement as $single_product): ?>
                 <div class='col-md-6'>
                     <div class="card">
-                        <img src="images/<?=$single_product["product_image"]; ?>"/>
-                        <h4><?=$single_product["product_name"]; ?></h4>
+                        <img class="card-img-top" alt="Card image cap" src="images/<?=$single_product["product_image"]; ?>"/>
+                        <h4 class="card-title"><?=$single_product["product_name"]; ?></h4>
                         <h5><?=$single_product['price']; ?> $</h5>
                         <h6>Qty: <input id= "quantity" name="<?=$single_product["quantity"]?>" type="number" min=0 form="checkout" value = 0></h6>
                     </div>
                 </div>
             <?$i++;
+            //use modulo to generate a new div row.
             if ($i % 2 == 0) {
             echo '</div><div class="row">';}?>
         <?php endforeach;?>
