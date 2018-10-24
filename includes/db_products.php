@@ -19,8 +19,6 @@ $statement->execute(
     ":product_name" => $product_name
   ]
 );
-// When select is used, fetch must happen
-
 
 // If data is fetched, start doing session and foreach.
 if($statement){
@@ -34,7 +32,7 @@ if($statement){
             foreach($statement as $single_product): ?>
                 <div class='col-md-6'>
                     <div class="card">
-                        <img src=" <?=$single_product["product_image"]; ?>"/>
+                        <img src="images/<?=$single_product["product_image"]; ?>"/>
                         <h4><?=$single_product["product_name"]; ?></h4>
                         <h5><?=$single_product['price']; ?> $</h5>
                         <h6>Qty: <input id= "quantity" name="<?=$single_product["quantity"]?>" type="number" min=0 form="checkout" value = 0></h6>
@@ -50,7 +48,7 @@ if($statement){
 <?php
 
 $fetched_product = $statement->fetch();
-$_SESSION["product_name"] = $fetched_product["product_name"];
+$_SESSION["product_name"] = $single_product["product_name"];
 $_SESSION["price"] = $fetched_product["price"];
 $_SESSION["quantity"] = $fetched_product["quantity"];
 $_SESSION["product_image"] = $single_product["product_image"];
