@@ -60,7 +60,7 @@ $_SESSION["product_image"] = $single_product["product_image"];
  
   
 } else {
-  // Handle errors, go back to frontpage and populate $_GET
+  // Handle 
   echo 'booo';
 }
 

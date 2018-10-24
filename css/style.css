@@ -45,3 +45,21 @@ h2 {
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
 }
+.card {
+    font-family: sans-serif;
+    padding: 1rem;
+    box-shadow: 2px 2px 12px 0 rgba(0, 0, 80, 0.2);
+    color: rgba(0, 0, 80, 1);
+    min-width: 50%;
+    min-height: 0%;
+    margin: 0 auto 2rem auto;
+    border-radius: .5rem;	
+    text-align: left;
+    background-color: white;
+}
+
+img {
+    width: 100%; /* You can set the dimensions to whatever you want */
+    height: 250px;
+    object-fit: contain;
+}
