@@ -28,36 +28,37 @@ echo '</style>'; ?>
   </span></button>
 </nav>
 
+<!-- login form that send inputs to form_validation.php. -->
 <div class="formbox">
-    <h3 style="color:bisque;font-size:2.5em;">Login</h3><br>
-  <form class="needs-validation" id="login" action="../validations/login_validation.php" method="POST" novalidate>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="username"><h5>Username:</h5></label>
-        <input type="text" class="form-control" name="username" id="username"  required>
-        <div class="valid-feedback">
-        ✔
-        </div>        
-        <div class="invalid-feedback">
-          Please type in your username.
+  <h3 style="color:bisque;font-size:2.5em;">Login</h3><br>
+    <form class="needs-validation" id="login" action="../validations/login_validation.php" method="POST" novalidate>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="username"><h5>Username:</h5></label>
+          <input type="text" class="form-control" name="username" id="username"  required>
+          <div class="valid-feedback">
+          ✔
+          </div>        
+          <div class="invalid-feedback">
+            Please type in your username.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="password"><h5>Password:</h5></label>
+          <input type="text" class="form-control" name="password"  id="password"  required>
+          <div class="valid-feedback">
+          ✔
+          </div>
+          <div class="invalid-feedback">
+            Please type in your password.
+          </div>
         </div>
       </div>
-      <div class="col-md-6 mb-3">
-        <label for="password"><h5>Password:</h5></label>
-        <input type="text" class="form-control" name="password"  id="password"  required>
-        <div class="valid-feedback">
-        ✔
+        <div class="d-flex justify-content-end">
+          <a href="../index.php" class="btn btn-danger btn-lg mr-2" role="button" aria-pressed="true">Cancel</a>
+          <button class="btn btn-success btn-lg " type="submit" value="submit" name="submit">Login</button>
         </div>
-        <div class="invalid-feedback">
-          Please type in your password.
-        </div>
-      </div>
-    </div>
-    <div class="d-flex justify-content-end">
-        <a href="../index.php" class="btn btn-danger btn-lg mr-2" role="button" aria-pressed="true">Cancel</a>
-        <button class="btn btn-success btn-lg " type="submit" value="submit" name="submit">Login</button>
-    </div>
-  </form>
+    </form>
 </div>
 
 <script>
