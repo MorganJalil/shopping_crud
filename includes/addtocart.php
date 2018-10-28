@@ -1,13 +1,60 @@
 <?php
 session_start();
-if(isset($_GET) & !empty($_GET)){
-  $id = $_GET['id'];
-  if(isset($_GET['quant']) & !empty($_GET['quant'])){ $quant = $_GET['quant']; }else{ $quant = 1;}
-  $_SESSION['cart'][$id] = array("quantity" => $quant); 
-  header('location: ../index.php');
- 
-}else{
-  header('location: ../index.php');
-}
+include 'database_connection.php';
 
+
+// backend validation.
+
+if(!isset($_POST['id'])) { 
+  // check if the username has not been set
+  header('Location: index.php?register_failed=true');
+}else {
+$_SESSION["id"] = $_POST["id"];
+};
+
+if(!isset($_POST['username'])) { 
+    // check if the username has not been set
+    header('Location: index.php?register_failed=true');
+}else {
+  $_SESSION["username"] = $_POST["username"];
+};
+
+if(!isset($_POST['product_name'])) { 
+    // check if the password has not been set
+    header('Location: index.php?register_failed=true');
+}else {
+  $_SESSION["product_name"] = $_POST["product_name"];
+};
+
+if(!isset($_POST['amount'])) { 
+    // check if the phone_number has not been set
+    header('Location: index.php?register_failed=true');
+}else {
+  $_SESSION["amount"] = $_POST["amount"];
+};
+
+if(!isset($_POST['unit_price'])) { 
+    // check if the email has not been set
+    header('Location: index.php?register_failed=true');
+}else {
+  $_SESSION["price"] = $_POST["price"];
+};
+?>
+
+<?php
+if(isset($_POST["amount"])){
+
+  $statement1 = $pdo->prepare("INSERT INTO customer_basket
+  (id, username, product_name, quantity, price) VALUES (:id, :username, :product_name, :quantity, :price)");
+  $statement1->execute(
+    [
+      ":id" => $_SESSION["id"],
+      ":username" => $_SESSION["username"],
+      ":product_name" => $_SESSION["product_name"],
+      ":quantity" => $_SESSION["amount"],
+      ":price" => $_SESSION["price"]
+    ]
+  );
+}
+header('location: ../index.php');
 ?>

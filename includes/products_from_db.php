@@ -10,8 +10,7 @@ include 'database_connection.php';
 
 // Get products from database
 
-$statement = $pdo->prepare("SELECT * FROM products
-  ORDER BY id ASC");
+$statement = $pdo->prepare("SELECT * FROM products ORDER BY id ASC");
 // Execute populates the statement and runs it
 $statement->execute();
 
@@ -28,10 +27,11 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
                         <img class="card-img-top" alt="Card image cap" src="images/<?=$single_product["product_image"]; ?>"/>
                         <h4 class="card-title"><?=$single_product["product_name"]; ?></h4>
                         <h5><?=$single_product['price']?> $</h5>
-                        <form method=”POST” id="form" action="includes/addtocart.php">
-                        <h6>Qty: <input id="quantity" name="quantity" type="number" min=0 form="form" value="<?php $single_product['price']?>"></h6>
-                        <input type="hidden" name="product_name" value="<?= $single_product['product_name']?>" >
-                        <input type="submit" class="btn btn-success"/>
+                        <form method="POST" id="xx" action="includes/addtocart.php">
+                            <h6>Qty: <input name="amount" type="number" min=0 value="<?php $single_product['price']?>"></h6>
+                            <input type="hidden" name="product_name" value="<?= $single_product['product_name'];?>">
+                            <input type="hidden" name="price" value="<?= $single_product['price'];?>">
+                            <input type="submit" class="btn btn-success"/>
                         </form>
                     </div>
                 </div>
@@ -40,7 +40,9 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
             if ($i % 2 == 0) {
             echo '</div><div class="row">';}?>
         <?php endforeach;?>
-        
+        <form form="xx" action="views/checkout.php" method="POST">
+      <button class="btn btn-success" type="submit" value="lay_order" name="lay_order">Send le order</button>
+    </form>
 </div>
 
 

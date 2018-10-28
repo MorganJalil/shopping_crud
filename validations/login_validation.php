@@ -23,6 +23,8 @@ $is_password_correct = password_verify($password, $fetched_user["password"]);
 if($is_password_correct){
   // Save user globally to session
   $_SESSION["username"] = $fetched_user["username"];
+  $_SESSION["id"] = $fetched_user["id"];
+
   // Go back to frontpage
   header('Location: ../index.php');
 } else {
