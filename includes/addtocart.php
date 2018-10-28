@@ -3,7 +3,8 @@ session_start();
 include 'database_connection.php';
 
 
-// backend validation.
+
+// validation for 
 
 if(!isset($_POST['id'])) { 
   // check if the username has not been set
@@ -48,11 +49,11 @@ if(isset($_POST["amount"])){
   (id, username, product_name, quantity, unit_price) VALUES (:id, :username, :product_name, :quantity, :unit_price)");
   $statement1->execute(
     [
-      ":id" => $_SESSION["id"],
+      ":user_id" => $_SESSION["id"],
       ":username" => $_SESSION["username"],
       ":product_name" => $_SESSION["product_name"],
       ":quantity" => $_SESSION["amount"],
-      ":unit_price" => $_SESSION["unit_price"]
+      ":price" => $_SESSION["unit_price"]
     ]
   );
 }
