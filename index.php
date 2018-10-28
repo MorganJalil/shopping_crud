@@ -8,6 +8,6 @@ session_start();
 <body>
  <?php 
     include ('includes/navbar.php');
-    include ('includes/db_products.php')?>
+    include ('includes/products_from_db.php')?>
 </body>
 </html>

@@ -39,7 +39,7 @@ echo '</style>'; ?>
         ✔
         </div>        
         <div class="invalid-feedback">
-          Please register in your username.
+          Please register your username.
         </div>
       </div>
       <div class="col-md-6 mb-3">
@@ -59,7 +59,7 @@ echo '</style>'; ?>
         ✔
         </div>
         <div class="invalid-feedback">
-          Please register in your phonenumber.
+          Please register your phonenumber.
         </div>
       </div>
       <div class="col-md-6 mb-3">
@@ -78,7 +78,7 @@ echo '</style>'; ?>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
         <label class="form-check-label" for="invalidCheck">
-          Agree to terms and conditions
+          Agree to terms and conditions.
         </label>
         <div class="invalid-feedback">
           You must agree before submitting.
