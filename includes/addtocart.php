@@ -37,7 +37,7 @@ if(!isset($_POST['unit_price'])) {
     // check if the email has not been set
     header('Location: index.php?register_failed=true');
 }else {
-  $_SESSION["price"] = $_POST["price"];
+  $_SESSION["unit_price"] = $_POST["unit_price"];
 };
 ?>
 
@@ -45,14 +45,14 @@ if(!isset($_POST['unit_price'])) {
 if(isset($_POST["amount"])){
 
   $statement1 = $pdo->prepare("INSERT INTO customer_basket
-  (id, username, product_name, quantity, price) VALUES (:id, :username, :product_name, :quantity, :price)");
+  (id, username, product_name, quantity, unit_price) VALUES (:id, :username, :product_name, :quantity, :unit_price)");
   $statement1->execute(
     [
       ":id" => $_SESSION["id"],
       ":username" => $_SESSION["username"],
       ":product_name" => $_SESSION["product_name"],
       ":quantity" => $_SESSION["amount"],
-      ":price" => $_SESSION["price"]
+      ":unit_price" => $_SESSION["unit_price"]
     ]
   );
 }
