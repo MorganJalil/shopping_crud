@@ -3,8 +3,14 @@ session_start();
 include 'database_connection.php';
 
 
-
 // validation for 
+
+
+if(!isset($_POST['username'])) { 
+  // check if the username has not been set
+  header('Location: ../index.php?addproduct_failed=true');
+};
+
 
 if(!isset($_POST['submit'])) { 
   // check if the username has not been set
