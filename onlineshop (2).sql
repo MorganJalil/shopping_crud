@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 28, 2018 at 09:07 PM
+-- Generation Time: Oct 29, 2018 at 09:44 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -29,12 +29,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `customerbasket` (
-  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `user_id` int(60) NOT NULL,
   `username` varchar(256) NOT NULL,
   `product_name` varchar(256) NOT NULL,
   `quantity` int(255) NOT NULL,
   `price` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customerbasket`
+--
+
+INSERT INTO `customerbasket` (`id`, `user_id`, `username`, `product_name`, `quantity`, `price`) VALUES
+(1, 4, '1', 'Baguette', 1, 5),
+(2, 4, '1', 'Baguette', 1, 5),
+(3, 4, '1', 'Baguette', 12, 5),
+(4, 4, '1', 'Baguette', 12, 5);
 
 -- --------------------------------------------------------
 
@@ -92,7 +103,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `phone_number`, `email`) VALU
 -- Indexes for table `customerbasket`
 --
 ALTER TABLE `customerbasket`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `products`
@@ -114,7 +125,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `customerbasket`
 --
 ALTER TABLE `customerbasket`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `products`
 --
