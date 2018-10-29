@@ -43,8 +43,8 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
                         <form method="POST" id="basket" action="includes/addtocart.php">
                             <h6>Qty: <input name="amount" type="number" min=0 value="<?php $single_product['unit_price']?>"></h6>
                             <input type="hidden" name="product_name" value="<?= $single_product['product_name'];?>">
-                            <input type="hidden" name="unit_price" value="<?= $single_product['price'];?>">
-                            <input type="submit" class="btn btn-success"/>
+                            <input type="hidden" name='unit_price' value="<?= $single_product['price'];?>">
+                            <input type="submit" name="submit" class="btn btn-success"/>
                         </form>
                     </div>
                 </div>

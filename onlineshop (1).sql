@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 25, 2018 at 03:34 PM
+-- Generation Time: Oct 28, 2018 at 09:07 PM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.2.1
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `onlineshop`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customerbasket`
+--
+
+CREATE TABLE `customerbasket` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(256) NOT NULL,
+  `product_name` varchar(256) NOT NULL,
+  `quantity` int(255) NOT NULL,
+  `price` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -66,11 +80,19 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `phone_number`, `email`) VALUES
 (1, 'Morgan', '$2y$10$r9ZXHgVOXxr65IPBnijdiOh0RO53NcWsQLoYxay/Gpse7Gd8y3i0O', 123, 'keso@keso.se'),
-(2, 'ny', '$2y$10$5V7uag7Waj52eVwRKaqbQ.n7zR85UL58hdbDFfNjFWY/atizGP04y', 123, 'mu@bu.se');
+(2, 'ny', '$2y$10$5V7uag7Waj52eVwRKaqbQ.n7zR85UL58hdbDFfNjFWY/atizGP04y', 123, 'mu@bu.se'),
+(3, 'kebab', '$2y$10$RnR91AO2lhVExLfI8WoPnuE2MgPwfG/Ad9zadVqyBTAAO.toMvl0O', 2147483647, 'moggelicious@hotmail.com'),
+(4, '1', '$2y$10$InfsHR7.unPvmUix9Rr0seSF4e3zKbZHW/C55fYzZxHqtQqP4DYQS', 2147483647, 'moggelicious@hotmail.com');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `customerbasket`
+--
+ALTER TABLE `customerbasket`
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `products`
@@ -89,6 +111,11 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `customerbasket`
+--
+ALTER TABLE `customerbasket`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
@@ -97,7 +124,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
