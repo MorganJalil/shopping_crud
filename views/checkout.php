@@ -14,9 +14,11 @@ echo '</style>'; ?>
     include ('../includes/navbar.php');
     //include ('../includes/products_from_db.php')
     $username = $_SESSION["username"];
-    $statement = $pdo->prepare("SELECT customerbasket.id, customerbasket.user_id, customerbasket.username, customerbasket.product_name, customerbasket.quantity, 
-        COUNT(customerbasket.quantity) AS QTY FROM customerbasket WHERE username = :username GROUP BY user_id, product_name");
+    $statement = $pdo->prepare("SELECT customerbasket.id, customerbasket.user_id, customerbasket.username, customerbasket.product_name, 
+    SUM(customerbasket.quantity) AS quantity, COUNT(quantity) AS momo FROM customerbasket WHERE username = :username GROUP BY user_id, product_name");
     
+   
+
       $statement->execute(
           [
               ':username' => $username
@@ -28,7 +30,6 @@ echo '</style>'; ?>
             <?php
             foreach($users as $user): ?>
             <p><?= $user["product_name"] ?></p>
-            <p><?= $user["quantity"] ?></p>
             <p><?= $user["quantity"] ?></p>
             <?php endforeach; ?>
         </div>

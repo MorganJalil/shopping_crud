@@ -40,12 +40,17 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
                         <img class="card-img-top" alt="Card image cap" src="images/<?=$single_product["product_image"]; ?>"/>
                         <h4 class="card-title"><?=$single_product["product_name"]; ?></h4>
                         <h5><?=$single_product['price']?> $</h5>
+                        <?php if(!isset($_POST['amount'])) { ?>
                         <form method="POST" id="basket" action="includes/addtocart.php">
                             <h6>Qty: <input name="amount" type="number" min=1 value="<?php $single_product['unit_price']?>" required value="1"></h6>
                             <input type="hidden" name="product_name" value="<?= $single_product['product_name'];?>">
                             <input type="hidden" name='unit_price' value="<?= $single_product['price'];?>">
                             <input type="submit" name="submit" class="btn btn-success"/>
                         </form>
+                        <?php } else { ?>
+                        <p>kebab</p>
+                        
+                        <? } ?>
                     </div>
                 </div>
             <?$i++;
