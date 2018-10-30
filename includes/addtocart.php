@@ -3,7 +3,7 @@ session_start();
 include 'database_connection.php';
 
 
-// validation for 
+// validation for if username or submit not set
 
 
 if(!isset($_POST['username'])) { 
@@ -23,7 +23,7 @@ $_SESSION['unit_price'] = $_POST['unit_price'];
 };
 
 ?>
-
+// validation for if there is data in amont, do put in db and sessions
 <?php
 if(isset($_POST["amount"])){
 
@@ -40,7 +40,4 @@ if(isset($_POST["amount"])){
   );
 }
 header('location: ../index.php');
-
-
-
 ?>
