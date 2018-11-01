@@ -26,7 +26,7 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
     </div>
     <?php else : ?>
     <div class="alert alert-info text-center">
-  <strong> You can't le buy if you have nothing in le basket mon ami!</strong>
+  <strong> You can't buy if you have nothing in le basket, mon ami.</strong>
   <p>Also don't forget to log in. </p>
   </div>
 <?php endif; ?>

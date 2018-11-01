@@ -1,12 +1,9 @@
 <?php
 session_start();
 include 'database_connection.php';
-
-
-
+// delete row with id
 if(isset($_GET['remove'])) {
 $delete_product = $_GET['remove'];
-
 $statement = $pdo->prepare("DELETE FROM customerbasket WHERE id = $delete_product");
   $statement->execute(
     [

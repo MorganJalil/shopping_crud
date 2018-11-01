@@ -17,15 +17,14 @@ echo '</style>'; ?>
     </button>
     </nav>
 
- 
-
-<div class="container">
-<div class=row>
-    <div class="col-6 card">
-    User: <h6 style="color:sandybrown"><?=$_SESSION["username"]?></h6>
-            Phone Number: <h6 style="color:sandybrown"><?=$_SESSION["phone_number"]?></h6>
-            E-Mail: <h6 style="color:sandybrown"><?=$_SESSION["email"]?></h6><br>
-            <strong>Thank you for ordering from our store!</strong><br>
-            <a href="../index.php"><button type="button" class="btn btn-info">Back</button></a>
-    </div>
+    <div class="container">
+        <div class=row>
+            <div class="col-6 card">
+                User: <h6 style="color:sandybrown"><?=$_SESSION["username"]?></h6>
+                Phone Number: <h6 style="color:sandybrown"><?=$_SESSION["phone_number"]?></h6>
+                E-Mail: <h6 style="color:sandybrown"><?=$_SESSION["email"]?></h6><br>
+                <strong>Thank you for ordering from our store!</strong><br>
+                <a href="../validations/logout_validation.php"><button type="button" class="btn btn-info">Log out</button></a>
+            </div>
+        </div>
     </div>
