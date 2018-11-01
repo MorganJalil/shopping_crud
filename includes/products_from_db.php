@@ -47,10 +47,10 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
                             <input type="hidden" name='unit_price' value="<?= $single_product['price'];?>">
                             <input type="submit" name="submit" class="btn btn-success"/>
                         </form>
-                        <?php } else { ?>
-                        <p>kebab</p>
-                        
-                        <? } ?>
+                        <?php } else { 
+                            header('location: ../index.php');
+                            ?>
+                        <?php } ?>
                     </div>
                 </div>
             <?$i++;
