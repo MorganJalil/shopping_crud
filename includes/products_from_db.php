@@ -21,7 +21,7 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
     <?php if(isset($_SESSION['amount'], $_SESSION['username'])): ?>
     <div class="card text-right">
         <form form="basket" action="views/checkout.php" method="POST">
-            <button class="btn btn-success" type="submit" value="lay_order" name="lay_order">Send le order</button>
+            <button class="btn btn-success" type="submit" value="lay_order" name="lay_order">Checkout</button>
         </form>
     </div>
     <?php else : ?>
@@ -45,7 +45,7 @@ $all_products = $statement->fetchAll(PDO::FETCH_ASSOC);
                             <h6>Qty: <input name="amount" type="number" min=1 value="<?php $single_product['unit_price']?>" required value="1"></h6>
                             <input type="hidden" name="product_name" value="<?= $single_product['product_name'];?>">
                             <input type="hidden" name='unit_price' value="<?= $single_product['price'];?>">
-                            <input type="submit" name="submit" class="btn btn-success"/>
+                            <input type="submit" name="submit" class="btn btn-success" value="add"/>
                         </form>
                         <?php } else { 
                             header('location: ../index.php');
