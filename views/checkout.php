@@ -49,8 +49,11 @@ echo '</style>'; ?>
                 <?php endforeach; ?>
             </div>
             <div class="col-8 card">
-            <h5 style="color:sandybrown">Total: <span style="color:black;"><?= $sum ?> $</span></h5>
-            <a href="confirm"><button type="button" class="btn btn-success">Send order</button></a>
+            User: <h6 style="color:sandybrown"><?=$_SESSION["username"]?></h6>
+            Phone Number: <h6 style="color:sandybrown"><?=$_SESSION["phone_number"]?></h6>
+            E-Mail: <h6 style="color:sandybrown"><?=$_SESSION["email"]?></h6><br>
+            <h3 style="color:sandybrown">Total: <span style="color:black;"><?= $sum ?> $</span></h3>
+            <a href="confirm.php"><button type="button" class="btn btn-success">Send order</button></a>
             </div>
         </div>
 </body>

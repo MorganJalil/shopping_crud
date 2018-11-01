@@ -24,6 +24,8 @@ if($is_password_correct){
   // Save user globally to session
   $_SESSION["username"] = $fetched_user["username"];
   $_SESSION["id"] = $fetched_user["id"];
+  $_SESSION["phone_number"] = $fetched_user["phone_number"];
+  $_SESSION["email"] = $fetched_user["email"];
 
   // Go back to frontpage
   header('Location: ../index.php');
