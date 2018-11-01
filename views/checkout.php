@@ -25,12 +25,17 @@ echo '</style>'; ?>
           ]
         );
 
-      $users = $statement->fetchAll(PDO::FETCH_ASSOC);?>
-        <div class="col-6 card">
+      $user_baskets = $statement->fetchAll(PDO::FETCH_ASSOC);?>
+        <div class="col-9 card">
             <?php
-            foreach($users as $user): ?>
-            <p><?= $user["product_name"] ?></p>
-            <p><?= $user["quantity"] ?></p>
+            foreach($user_baskets as $single_basket): ?>
+            <p><?= $single_basket["id"] ?></p>
+            <p><?= $single_basket["product_name"] ?></p>
+            <p><?= $single_basket["quantity"] ?></p>
+            <!-- Delete row though id. -->
+            <a href="../includes/delete.php?remove=<?=$single_basket['id']?>"> Ta bort </a>
+            <hr>
+ 
             <?php endforeach; ?>
         </div>
 </body>
